@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chanllm"
+version = "1.0.0"
+description = "ChanLLM - 缠论大模型，基于Qwen3.5-0.8B+LoRA微调"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "zoransun", email = "zoransun@example.com"}
+]
+keywords = ["nlp", "llm", "chinese", "chan-theory", "lora", "qwen"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "torch>=2.0.0",
+    "transformers>=4.40.0",
+    "peft>=0.10.0",
+    "accelerate>=0.30.0",
+    "gradio>=5.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "isort",
+]
+
+[project.scripts]
+chanllm = "chanllm.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/zoransun/chanllm"
+Repository = "https://github.com/zoransun/chanllm"
+Documentation = "https://github.com/zoransun/chanllm#readme"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["chanllm*"]
