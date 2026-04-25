@@ -14,13 +14,13 @@
 ### 从 GitHub 安装
 
 ```bash
-pip install git+https://github.com/zoransun/chanllm.git
+pip install git+https://github.com/Zoran689/chanllm.git
 ```
 
 ### 从源码安装
 
 ```bash
-git clone https://github.com/zoransun/chanllm.git
+git clone https://github.com/Zoran689/chanllm.git
 cd chanllm
 pip install -e .
 ```
